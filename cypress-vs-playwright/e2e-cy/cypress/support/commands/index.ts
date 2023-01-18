@@ -1,0 +1,14 @@
+import './addGroup.command';
+import './addRegistration.command';
+import './addUser.command';
+import './checkActivityLog.command';
+import './checkRegistrationItems.command';
+import './clearSearch.command';
+import './deleteRegistration.command';
+import './login.command';
+import './logout.command';
+import './searchGroup.command';
+import './searchRegistration.command';
+import './searchUser.command';
+import './updateRegistration.command';
+import './updateUser.command';

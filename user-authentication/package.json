@@ -1,0 +1,14 @@
+{
+  "name": "user-auth",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Kyle Whitaker",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "dependencies": {},
+  "devDependencies": {}
+}

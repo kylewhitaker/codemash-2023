@@ -1,0 +1,26 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "./generated"
+}
+
+model User {
+  id        Int     @id @default(autoincrement())
+  cognitoId String? @unique
+  firstName String
+  lastName  String
+  email     String  @unique
+  bets      Bet[]
+}
+
+model Bet {
+  id     Int     @id @default(autoincrement())
+  amount Int
+  win    Boolean
+  user   User    @relation(fields: [userId], references: [id])
+  userId Int
+}

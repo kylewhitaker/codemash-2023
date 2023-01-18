@@ -1,0 +1,22 @@
+{
+  "name": "e2e-cy",
+  "version": "1.0.0",
+  "description": "Cypress end-to-end testing utilities",
+  "repository": "https://github.com/kylewhitaker/codemash-2023",
+  "author": "Kyle Whitaker",
+  "license": "none",
+  "private": true,
+  "scripts": {
+    "start": "yarn workspace client start:dev",
+    "test": "cypress open",
+    "test:ci": "cypress run"
+  },
+  "devDependencies": {
+    "@cypress/webpack-preprocessor": "^5.10.0",
+    "cypress": "12.3.0",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.5.4",
+    "webpack": "^5.65.0"
+  },
+  "dependencies": {}
+}

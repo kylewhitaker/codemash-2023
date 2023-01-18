@@ -1,0 +1,19 @@
+{
+  "name": "e2e-pw",
+  "version": "1.0.0",
+  "description": "Playwright end-to-end testing utilities",
+  "repository": "https://github.com/kylewhitaker/codemash-2023",
+  "author": "Kyle Whitaker",
+  "license": "none",
+  "private": true,
+  "scripts": {
+    "start": "yarn workspace client start:dev",
+    "test": "playwright test",
+    "report": "playwright show-report",
+    "generate": "playwright codegen"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.29.2"
+  },
+  "dependencies": {}
+}

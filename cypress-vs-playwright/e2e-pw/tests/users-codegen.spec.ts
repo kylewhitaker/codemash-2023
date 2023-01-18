@@ -1,0 +1,31 @@
+import { test, expect } from '@playwright/test';
+
+test('test', async ({ page }) => {
+  await page.goto('http://localhost:3000/');
+  await page.goto('http://localhost:3000/login');
+  await page.getByLabel('Email').click();
+  await page.getByLabel('Email').fill('kylewhitaker51@gmail.com');
+  await page.getByLabel('Email').press('Tab');
+  await page.getByLabel('Password').fill('CodeM@sh23');
+  await page.getByRole('button', { name: 'Log in' }).click();
+  await page.getByRole('button', { name: 'Add New Registration' }).click();
+  await page.getByRole('button', { name: 'Cancel' }).click();
+  await page.getByRole('button', { name: 'menu' }).click();
+  await page.getByRole('button', { name: 'Users' }).click();
+  await page.getByRole('button', { name: 'Add New User' }).click();
+  await page.getByLabel('Registrar').check();
+  await page.getByLabel('First Name *').click();
+  await page.getByLabel('First Name *').fill('Test');
+  await page.getByLabel('First Name *').press('Tab');
+  await page.getByLabel('Last Name *').fill('Registrar123');
+  await page.getByLabel('Last Name *').press('Tab');
+  await page.getByLabel('Email *').fill('e2etestdummy+123@gmail.com');
+  await page.getByLabel('Email *').press('Tab');
+  await page.locator('input[name="Phone"]').press('Tab');
+  await page.getByLabel('Convention Role').press('Tab');
+  await page.getByRole('button', { name: 'Send Invitation' }).click();
+  await page.getByRole('alert').getByRole('button').click();
+  await page.getByPlaceholder('Search').click();
+  await page.getByPlaceholder('Search').fill('e2etestdummy+123@gmail.com');
+  await page.getByRole('cell', { name: 'Test Registrar123' }).click();
+});
